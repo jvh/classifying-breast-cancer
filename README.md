@@ -4,11 +4,11 @@ In this report I aim to create 2 classifiers to predict the classification of br
 
 ## Tasks Overview
 
-Using the breast cancer dataset provided by Wisconsin University1, complete the following tasks: 
+Using the breast cancer dataset provided by Wisconsin University, complete the following tasks: 
 1. Tell us something useful about the difficulty of classifying this data.
 2. Build two classifiers and compare them.
 3. What would you do if you come across a dataset that contains missing values.
 
 ## Classifiers
 
-The classifiers in this report are: logistic classification and k-nearest neighbours models. In order to run them, simply execute the main methods in their corresponding files.
+The classifiers in this report are: logistic regression and k-nearest neighbours models. In order to run them, simply execute the main methods in their corresponding files.
