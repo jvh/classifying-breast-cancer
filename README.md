@@ -2,6 +2,8 @@
 
 In this report I aim to create 2 classifiers to predict the classification of breast cancer when given a number of properties regarding a tumour. Code produced for this task will be included separately to this report.
 
+**NOTE**: This was done as a personal project
+
 ## Tasks Overview
 
 Using the breast cancer dataset provided by Wisconsin University, complete the following tasks: 
