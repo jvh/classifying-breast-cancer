@@ -68,22 +68,22 @@ def predict_classification(neighbours):
 
 
 if __name__ == '__main__':
-    training_data, unseen_data = load_data()
+    data_training, data_unseen = load_data()
 
-    print('training_data length: {}'.format(len(training_data.index)))
-    print('unseen_data length: {}'.format(len(unseen_data.index)))
+    print('training_data length: {}'.format(len(data_training.index)))
+    print('unseen_data length: {}'.format(len(data_unseen.index)))
 
     # The number of correct predictions
     num_correct = 0
 
-    for index, row in unseen_data.iterrows():
-        neighbours = get_neighbours(training_data, row.tolist()[:-1])
-        predicted_classification = predict_classification(neighbours)
+    for index, row in data_unseen.iterrows():
+        # Gets the neighbours for that particular unseen record
+        records_neighbours = get_neighbours(data_training, row.tolist()[:-1])
+        classification_prediction = predict_classification(records_neighbours)
         actual_classification = row.tolist()[0]
         # If predicted classification is the same as the actual
-        if actual_classification == predicted_classification:
+        if actual_classification == classification_prediction:
             num_correct += 1
 
-    accuracy = num_correct / len(unseen_data.index)
+    accuracy = num_correct / len(data_unseen.index)
     print("Accuracy: {}".format(accuracy))
-
