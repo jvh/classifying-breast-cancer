@@ -6,19 +6,18 @@ In this project, I attempt to classify if a tumour present in breast tissue (i.e
 
 ## How to Run
 
+These commands should both be ran in the **top-level** directory of the repository.
+
 ### Prerequisites
 
 Install [python3](https://www.python.org/download/releases/3.0/).
 
-Run command `pip install -r requirements.txt` in order to install package requirements.
+Run command `pip install -r src/requirements.txt` in order to install package requirements.
 
 ### Commands
 
-In order to run **_k_-nearest_neighbours**, execute the command `python k_nearest_neighbour.py`.
-
-In order to run **logistic regression classification**, execute the command `python logistic_regression.py`.
-
-These commands should both be ran in the top-level directory of the repository.
+* _k_-nearest_neighbours: `python src/k_nearest_neighbour.py`.
+* logistic regression classification: `python src/logistic_regression.py`.
 
 ## Dataset
 
