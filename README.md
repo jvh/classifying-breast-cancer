@@ -22,7 +22,7 @@ These commands should both be ran in the top-level directory of the repository.
 
 ## Dataset
 
-I am using a [dataset](https://archive.ics.uci.edu/ml/machine-learning-databases/breast-cancer-wisconsin/) provided by the University of Wisconsin. The data has been cleaned to remove irrelevant (e.g. ID) and otherwise highly-correlated features which would adversely affect the results of the classification. It should be noted that the dataset itself isn't huge (~600 records) and this project would likely benefit from a larger dataset for training purposes. Additionally, data wasn't cleaned for any anomalous entries, this should be considered for larger datasets without known sources. I recommend using [OpenRefine](http://openrefine.org/) for this step should you wish to take it.
+I am using a [dataset](https://archive.ics.uci.edu/ml/machine-learning-databases/breast-cancer-wisconsin/) (`wdbc.data`) provided by the University of Wisconsin. The data has been cleaned to remove irrelevant (e.g. ID) and otherwise highly-correlated features which would adversely affect the results of the classification. It should be noted that the dataset itself isn't huge (~600 records) and this project would likely benefit from a larger dataset for training purposes. Additionally, data wasn't cleaned for any anomalous entries, this should be considered for larger datasets without known sources. I recommend using [OpenRefine](http://openrefine.org/) for this step should you wish to take it.
 
 ## Logistic Regression
 
