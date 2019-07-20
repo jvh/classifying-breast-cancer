@@ -1,6 +1,6 @@
 **NOTE**: This was done as a personal project
 
-# Classifying Breast Cancer Using Supervised Learning Techniques
+# Classifying Breast Cancer Using Supervised Machine Learning Techniques
 
 In this project, I attempt to classify if a tumour present in breast tissue (i.e. record of data containing a feature set of that tumour) is likely to be malignant or benign. For this, I have implemented 2 supervised learning techniques: **_k_-nearest neighbours** and **logistic regression**. 
 
