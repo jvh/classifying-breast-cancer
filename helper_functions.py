@@ -7,16 +7,17 @@
 import pandas as pd
 import numpy as np
 
-# The features, without the unecessary features + classification
+# Feature list excluding any unnecessary features
 FEATURES = ['mean_radius', 'mean_texture', 'mean_perimeter', 'mean_area', 'mean_smoothness',
-               'mean_compactness', 'mean_concavity', 'mean_concave_points', 'mean_symmetry', 'mean_fractal_dimension',
-               'standard_error_radius', 'standard_error_texture', 'standard_error_perimeter', 'standard_error_area',
-               'standard_error_smoothness', 'standard_error_compactness', 'standard_error_concavity',
-               'standard_error_concave_points', 'standard_error_symmetry', 'standard_error_fractal_dimension',
-               'worst_radius', 'worst_texture', 'worst_perimeter', 'worst_area', 'worst_smoothness',
-               'worst_compactness', 'worst_concavity', 'worst_concave_points', 'worst_symmetry',
-               'worst_fractal_dimension'
+            'mean_compactness', 'mean_concavity', 'mean_concave_points', 'mean_symmetry', 'mean_fractal_dimension',
+            'standard_error_radius', 'standard_error_texture', 'standard_error_perimeter', 'standard_error_area',
+            'standard_error_smoothness', 'standard_error_compactness', 'standard_error_concavity',
+            'standard_error_concave_points', 'standard_error_symmetry', 'standard_error_fractal_dimension',
+            'worst_radius', 'worst_texture', 'worst_perimeter', 'worst_area', 'worst_smoothness',
+            'worst_compactness', 'worst_concavity', 'worst_concave_points', 'worst_symmetry',
+            'worst_fractal_dimension'
             ]
+
 
 def calculate_accuracy(predictions_data, data_class):
     """
@@ -73,10 +74,7 @@ def read_csv_and_prep():
     :return data_file: The data including the classification
     """
     all_col_names = ['id', 'diagnosis'] + FEATURES
-    data = pd.read_csv(
-        'https://archive.ics.uci.edu/ml/machine-learning-databases/breast-cancer-wisconsin/wdbc.data',
-        header=None,
-        names=all_col_names)
+    data = pd.read_csv('wdbc.data', header=None, names=all_col_names)
 
     # Replace 'B' and 'M' with 0 and 1 respectively
     data['diagnosis'].replace('B', 0, inplace=True)

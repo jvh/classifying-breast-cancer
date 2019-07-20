@@ -37,7 +37,12 @@ if __name__ == '__main__':
     # Initialise coefficients (weights) to 0
     coefficients = np.zeros(data_formatted.shape[1])
 
+    predictions = None
+
     for count in range(EPOCH_COUNT):
+        if count > 0 and count % 10000 == 0:
+            print("Count: ", count)
+
         predictions = logistic_function(data_formatted, coefficients)
 
         # Calculating deviation between real and predicted
@@ -45,8 +50,8 @@ if __name__ == '__main__':
         # The gradient function is to be reduced, as we approach 0 we approach the least error (as the gradient tends
         # towards 0, our function shows that our results are becoming more accurate)
         gradient = np.dot(data_formatted.T, error)
+        # Adjusting coefficients for more accurate result
         coefficients += gradient * LEARNING_RATE
 
     print("Coefficient values {}".format(coefficients))
-
     print("Accuracy: {}".format(func.calculate_accuracy(predictions, data_class_only)))
